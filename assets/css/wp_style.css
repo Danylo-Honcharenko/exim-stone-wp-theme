@@ -1,0 +1,229 @@
+.user-icon {
+    background-image: url(../svg/user.svg);
+}
+
+.heart-icon {
+    background-image: url(../svg/heart.svg);
+}
+
+.cart-icon {
+    background-image: url(../svg/cart.svg);
+}
+
+.swiper-slide-button-left {
+    background-image: url(../svg/arrow-left.svg);
+}
+
+.swiper-slide-button-right {
+    background-image: url(../svg/arrow-right.svg);
+}
+
+.navbar-toggler-icon {
+    --bs-navbar-toggler-icon-bg: url(../svg/menu.svg);
+}
+
+.btn-close {
+    --bs-btn-close-bg: url(../svg/close.svg);
+}
+
+.loading > button {
+    background-color: grey;
+}
+
+.added > button {
+    background-color: darkslategrey;
+}
+
+.card-body > .wc-forward {
+    display: none;
+}
+
+.aws-container .aws-search-form {
+    display: flex;
+    column-gap: .5rem;
+}
+
+.aws-container .aws-search-field {
+    border: 1px solid #2f2f2f;
+    padding: 0 1.07em;
+    background-color: #1f1f1f;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+.aws-container .aws-search-field:focus {
+    background-color: #1f1f1f;
+    border: 1px solid white;
+    color: white;
+}
+
+.aws-container .aws-search-field::placeholder {
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+.aws-container .aws-search-form .aws-form-btn {
+    background-color: #000;
+    border: none;
+}
+
+.aws-container .aws-search-form .aws-form-btn:hover {
+    background-color: #2a2a2a;
+    border: none;
+}
+
+.aws-search-result {
+    background-color: #1f1f1f;
+}
+
+.aws-search-result .aws_result_title {
+    color: white;
+}
+
+.aws-search-result .aws_result_price {
+    color: white;
+}
+
+.aws-search-result .aws_result_item.hovered,.aws-search-result .aws_result_item:hover,.aws-search-result .aws_search_more a:hover {
+    background: black;
+}
+
+.woocommerce-pagination {
+    margin-top: 1rem;
+}
+
+.page-numbers {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: .5rem;
+}
+
+.page-numbers > li {
+    padding: .5rem 1rem .5rem 1rem;
+    background-color: #1f1f1f;
+}
+
+.up-sells > h2 {
+    text-align: center;
+    font-weight: lighter;
+}
+
+
+.tabs > .active > a > button {
+    background-color: #2a2a2a;
+    border-color: #2a2a2a;
+}
+
+.woocommerce-message {
+    background-color: #2A2A2A;
+}
+
+.woocommerce-message:focus-visible {
+    outline: none;
+}
+
+.woocommerce-product-attributes-item__value > p {
+    margin: 0;
+}
+
+.stars {
+    margin-top: 1rem;
+}
+
+.stars > span > a {
+    text-indent: -999em;
+    position: relative;
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    text-decoration: none;
+}
+
+.stars > span > a:after {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1em;
+    height: 1em;
+    line-height: 1;
+    content: '\f005';
+    font-family: 'Font Awesome 7 Free';
+    font-weight: 900;
+    text-indent: 0;
+    /*color: rgb(255, 212, 59);*/
+}
+
+.base-input {
+    padding: .5rem 1.07rem;
+}
+
+.cart-thumbnail {
+    max-width: 13rem;
+    max-height: 10rem;
+}
+
+@media (max-width: 441px) {
+    .cart-thumbnail {
+        max-width: 8rem;
+        height: auto;
+    }
+}
+
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+    color: white;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.select2-container--default .select2-selection--single {
+    border: 0;
+    border-radius: 0;
+}
+
+.select2-container .select2-selection--single {
+    height: auto;
+    padding: .5rem 1.07rem;
+    background-color: #1f1f1f;
+    border: 1px solid #2f2f2f;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+    top: 11px;
+    right: 9px;
+}
+
+.select2-container--open .select2-dropdown--below {
+    background-color: #1f1f1f;
+    border: 1px solid #2f2f2f;
+    color: white;
+}
+
+.select2-container--default .select2-results__option[aria-selected=true], .select2-container--default .select2-results__option[data-selected=true] {
+    background: #0073aa;
+}
+
+.select2-container--default .select2-results__option[aria-selected=true], .select2-container--default .select2-results__option[data-selected=true]:focus-visible {
+    outline: none;
+}
+
+.select2-container--default .select2-search--dropdown .select2-search__field {
+    background-color: #1f1f1f;
+    border: 1px solid #2f2f2f;
+    color: white;
+}
+
+.select2-container--default .select2-search--dropdown .select2-search__field:focus-visible {
+    outline: none;
+}
+
+.login-input::placeholder {
+    color: #C7C7C7;
+}
+
+.methods {
+    list-style-type: none;
+}
