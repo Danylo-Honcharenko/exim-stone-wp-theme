@@ -15,7 +15,7 @@ function eximstone_remove_phone_symbols($phone): string {
     <div class="container-xxl text-white">
         <div class="d-md-flex align-items-start gap-5 justify-content-md-center">
             <div class="d-flex gap-4 align-items-center flex-wrap logo-footer-container">
-                <div><img src="<?php echo get_template_directory_uri() . './assets/img/granit.in_.ua_footer.png' ?>"
+                <div><img src="<?php echo get_template_directory_uri() . '/assets/img/granit.in_.ua_footer.png' ?>"
                           alt="..."></div>
                 <div><h3 class="fw-lighter fs-1"><?php bloginfo( 'name' ); ?></h3>
                     <p><?php echo $custom_content_text['eximstone_slogan'] ?></p></div>

@@ -20442,8 +20442,6 @@ Swiper.use([Resize, Observer]);
 
 
 
-console.log("hello world!!!")
-
 const options = {
     root: null,
     rootMargin: "0px",
@@ -20463,8 +20461,12 @@ const menuCallback = (entries) => {
     });
 };
 
+const header = document.querySelector("#main-menu-container");
+
 const menuObserver = new IntersectionObserver(menuCallback, options);
-menuObserver.observe(document.querySelector("#main-menu-container"));
+if (header) {
+    menuObserver.observe(header);
+}
 
 jquery_module(document).ready(function(){
     jquery_module('.dropdown-submenu a.dropdown-submenu-toggle').on("click", function(e){
