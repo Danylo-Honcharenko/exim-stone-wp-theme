@@ -65,17 +65,16 @@
                 </div>
             </nav>
             <div class="d-flex align-items-center gap-3">
-                <div>
-                    <button type="button" class="user-icon" data-bs-toggle="offcanvas" data-bs-target="#offcanvasLogin"
-                            aria-controls="offcanvasLogin"></button>
-                    <div class="offcanvas offcanvas-end bg-primary" data-bs-scroll="false" tabindex="-1"
-                         id="offcanvasLogin" aria-labelledby="offcanvasLoginLabel">
-                        <div class="offcanvas-header offcanvas-header-end">
-                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
-                                    aria-label="Close"></button>
-                            <h3 class="offcanvas-title fw-lighter" id="offcanvasLoginLabel">Вход</h3></div>
-                        <div class="offcanvas-body">
-                            <p>В разработке</p>
+<!--                <div>-->
+<!--                    <button type="button" class="user-icon" data-bs-toggle="offcanvas" data-bs-target="#offcanvasLogin"-->
+<!--                            aria-controls="offcanvasLogin"></button>-->
+<!--                    <div class="offcanvas offcanvas-end bg-primary" data-bs-scroll="false" tabindex="-1"-->
+<!--                         id="offcanvasLogin" aria-labelledby="offcanvasLoginLabel">-->
+<!--                        <div class="offcanvas-header offcanvas-header-end">-->
+<!--                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"-->
+<!--                                    aria-label="Close"></button>-->
+<!--                            <h3 class="offcanvas-title fw-lighter" id="offcanvasLoginLabel">Вход</h3></div>-->
+<!--                        <div class="offcanvas-body">-->
 <!--                            <form>-->
 <!--                                <div class="mb-3"><label for="exampleInputEmail1" class="form-label">Email адрес</label>-->
 <!--                                    <input type="email" class="form-control login-input" id="exampleInputEmail1"-->
@@ -85,22 +84,21 @@
 <!--                                </div>-->
 <!--                                <button type="submit" class="btn btn-primary w-100">Войти</button>-->
 <!--                            </form>-->
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <button type="button" class="heart-icon position-relative" data-bs-toggle="offcanvas"
-                            data-bs-target="#offcanvasWishlist" aria-controls="offcanvasWishlist"><span
-                                class="position-absolute top-0 start-0 translate-middle badge rounded-pill bg-light text-dark">0</span>
-                    </button>
-                    <div class="offcanvas offcanvas-end bg-primary" data-bs-scroll="false" tabindex="-1"
-                         id="offcanvasWishlist" aria-labelledby="offcanvasWishlistLabel">
-                        <div class="offcanvas-header offcanvas-header-end">
-                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
-                                    aria-label="Close"></button>
-                            <h3 class="offcanvas-title fw-lighter" id="offcanvasWishlistLabel">Список желаний</h3></div>
-                        <div class="offcanvas-body d-flex flex-column justify-content-between">
-                            <p>В разработке</p>
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div>-->
+<!--                    <button type="button" class="heart-icon position-relative" data-bs-toggle="offcanvas"-->
+<!--                            data-bs-target="#offcanvasWishlist" aria-controls="offcanvasWishlist"><span-->
+<!--                                class="position-absolute top-0 start-0 translate-middle badge rounded-pill bg-light text-dark">0</span>-->
+<!--                    </button>-->
+<!--                    <div class="offcanvas offcanvas-end bg-primary" data-bs-scroll="false" tabindex="-1"-->
+<!--                         id="offcanvasWishlist" aria-labelledby="offcanvasWishlistLabel">-->
+<!--                        <div class="offcanvas-header offcanvas-header-end">-->
+<!--                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"-->
+<!--                                    aria-label="Close"></button>-->
+<!--                            <h3 class="offcanvas-title fw-lighter" id="offcanvasWishlistLabel">Список желаний</h3></div>-->
+<!--                        <div class="offcanvas-body d-flex flex-column justify-content-between">-->
 <!--                            <div class="d-flex flex-column gap-3">-->
 <!--                                <div>-->
 <!--                                    <div class="d-flex align-items-start gap-3">-->
@@ -126,9 +124,9 @@
 <!--                                </div>-->
 <!--                            </div>-->
 <!--                            <div></div>-->
-                        </div>
-                    </div>
-                </div>
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
                 <?php if ( ! (is_cart() || is_checkout()) ) : ?>
                     <div>
                         <button type="button" class="cart-icon position-relative" data-bs-toggle="offcanvas"
