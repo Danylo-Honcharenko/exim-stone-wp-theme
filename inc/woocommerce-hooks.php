@@ -16,14 +16,6 @@ remove_action('woocommerce_after_shop_loop_item', 'woocommerce_template_loop_pro
 
 remove_action('woocommerce_before_shop_loop_item_title', 'woocommerce_template_loop_product_thumbnail', 10);
 
-add_action('woocommerce_before_shop_loop_item', function () {
-	echo '<div class="card" style="width: 20rem;">';
-}, 10);
-
-add_action('woocommerce_after_shop_loop_item', function () {
-	echo '</div>';
-}, 10);
-
 add_action('woocommerce_before_shop_loop_item_title', function () {
 	global $product;
 
@@ -53,7 +45,7 @@ add_action('woocommerce_shop_loop_item_title', function () {
 		echo '<p class="card-text fw-lighter">Категория: ' . $term->name . '</p>';
 	}
 
-	echo '<h5 class="card-title woocommerce-loop-product__title">' . get_the_title() . '</h5>';
+	echo '<h5 class="card-title woocommerce-loop-product__title text-truncate">' . get_the_title() . '</h5>';
 }, 10);
 
 remove_action('woocommerce_after_shop_loop_item_title', 'woocommerce_template_loop_price', 10);

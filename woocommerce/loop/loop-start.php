@@ -15,16 +15,14 @@
  * @version     3.3.0
  */
 
+global $use_slider;
+
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-?>
+if (!isset($use_slider)) {
+    $GLOBALS['use_slider'] = is_front_page() || is_product();
+}
 
-<?php if ( is_front_page() || is_product()) : ?>
-    <section class="container-xxl mt-5">
-        <div class="swiper homeItemsSwiper">
-            <div class="swiper-wrapper">
-<?php else : ?>
-    <div class="row row-cols-3 gap-4 items-container justify-content-center mt-3">
-<?php endif; ?>
+wc_get_template( 'loop/loop-resolver/loop-start.php' );

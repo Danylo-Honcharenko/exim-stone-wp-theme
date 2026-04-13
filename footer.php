@@ -27,7 +27,8 @@ function eximstone_remove_phone_symbols($phone): string {
                         'container'      => false
                 ) ); ?>
             </div>
-            <div><h4>Контакты</h4>
+            <div>
+                <h4>Контакты</h4>
                 <ul class="list-unstyled mt-3 footer-contact">
                     <li class="footer-contact-item"><?php echo $custom_content_text['eximstone_addr'] ?></li>
                     <li class="footer-contact-item"><a href=<?php echo '"tel:+' . eximstone_remove_phone_symbols($custom_content_text['eximstone_phone1']) . '"' ?>><?php echo $custom_content_text['eximstone_phone1'] ?></a></li>
@@ -39,7 +40,7 @@ function eximstone_remove_phone_symbols($phone): string {
         </div>
         <div class="pt-md-5 pb-md-5 pt-3 pb-3">
             <hr>
-            <p>2025 Granit.in.ua © All Rigths Reserved</p></div>
+            <p id="rights">Granit.in.ua © All Rigths Reserved</p></div>
     </div>
 </footer>
 </body>

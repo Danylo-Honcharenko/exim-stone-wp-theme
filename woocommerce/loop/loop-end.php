@@ -15,16 +15,14 @@
  * @version     2.0.0
  */
 
+global $use_slider;
+
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
-?>
-<?php if ( is_front_page() || is_product()) : ?>
-            </div>
-        <button class="swiper-slide-button-left swiper-button-prev rounded-circle" type="button" id="swiper-items-prev"></button>
-        <button class="swiper-slide-button-right swiper-button-next rounded-circle"  type="button" id="swiper-items-next"></button>
-        </div>
-    </section>
-<?php else : ?>
-    </div>
-<?php endif; ?>
+
+if (!isset($use_slider)) {
+    $GLOBALS['use_slider'] = is_front_page() || is_product();
+}
+
+wc_get_template( 'loop/loop-resolver/loop-end.php' );
