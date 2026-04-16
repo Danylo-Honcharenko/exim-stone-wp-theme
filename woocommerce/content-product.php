@@ -18,23 +18,16 @@
 defined( 'ABSPATH' ) || exit;
 
 global $product;
-global $use_slider;
+//global $use_slider;
 
 // Check if the product is a valid WooCommerce product and ensure its visibility before proceeding.
 if ( ! is_a( $product, WC_Product::class ) || ! $product->is_visible() ) {
 	return;
 }
-
-if (!isset($use_slider)) {
-    $use_slider = is_front_page() || is_product();
-}
-
 ?>
-<div class="<?php echo $use_slider ? 'swiper-slide' : 'card col' ?>" style="width: 20rem;">
-    <?php if ($use_slider) : ?>
-        <div class="card" style="width: 20rem;">
-    <?php endif; ?>
 
+<div class="<?php echo is_archive() ? 'col' : 'swiper-slide' ?>" <?php echo is_archive() ? 'style="width: 20rem;"' : '' ?>>
+    <div class="card" <?php echo is_archive() ? '' : 'style="width: 20rem;"' ?>>
     <?php
     /**
      * Hook: woocommerce_before_shop_loop_item.
@@ -73,8 +66,5 @@ if (!isset($use_slider)) {
      */
     do_action( 'woocommerce_after_shop_loop_item' );
     ?>
-
-    <?php if ($use_slider) : ?>
-        </div>
-    <?php endif; ?>
+    </div>
 </div>

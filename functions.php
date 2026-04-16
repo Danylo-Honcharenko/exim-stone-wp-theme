@@ -19,7 +19,7 @@ add_action('wp_enqueue_scripts', function () {
 	wp_enqueue_style('eximstonewpcss', get_template_directory_uri() . '/assets/css/wp_style.css');
 	wp_enqueue_style('eximstonejsdelivr', 'https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css');
 	wp_enqueue_script('eximstonefontawesome', 'https://kit.fontawesome.com/7520a8b90b.js');
-	wp_enqueue_script('eximstonejs', get_template_directory_uri() . '/assets/js/main.d995488d15872f6e56d6.js', [], '', ['strategy' => 'defer']);
+	wp_enqueue_script('eximstonejs', get_template_directory_uri() . '/assets/js/main.2a83023ae8b2197517c0.js', [], '', ['strategy' => 'defer']);
 });
 
 //add_action( 'widgets_init', function () {

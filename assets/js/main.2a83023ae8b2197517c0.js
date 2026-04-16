@@ -10806,36 +10806,6 @@ if (submenu.length > 0) {
     });
 }
 
-const swiper = new Swiper('.homeItemsSwiper', {
-    speed: 700,
-
-    breakpoints: {
-        0: {
-            slidesPerView: 1
-        },
-        768: {
-            slidesPerView: 2
-        },
-        1024: {
-            slidesPerView: 3
-        },
-    }
-});
-
-const nextHome = document.querySelector("#swiper-items-next");
-const prevHome = document.querySelector("#swiper-items-prev");
-
-if (nextHome && prevHome) {
-    nextHome.addEventListener('click', (e) => {
-       e.preventDefault();
-        swiper.slideNext();
-    });
-    prevHome.addEventListener('click', (e) => {
-        e.preventDefault();
-        swiper.slidePrev();
-    });
-}
-
 const swiperItem = new Swiper('.itemSwiper', {
     speed: 700
 });
@@ -10861,6 +10831,82 @@ if (rights) {
     const currentYear = new Date().getFullYear().toString();
     rights.textContent = currentYear + " " + text;
 }
+
+const registerSlider = (sliderSetting) => {
+    if (sliderSetting.buttonNext === undefined && sliderSetting.buttonPrev === undefined) return;
+
+    const slider = new Swiper(`#${sliderSetting.sliderID}`, {
+        speed: 700,
+        breakpoints: {
+            0: {
+                slidesPerView: 1
+            },
+            768: {
+                slidesPerView: 2
+            },
+            1024: {
+                slidesPerView: 3
+            },
+        },
+        on: {
+            init: function (slide) {
+                if (this.slides.length <= slide.slidesPerViewDynamic()) {
+                    sliderSetting.buttonNext.classList.add("d-none");
+                    sliderSetting.buttonPrev.classList.add("d-none");
+                }
+            },
+            resize: function (slide) {
+                if (this.slides.length > slide.slidesPerViewDynamic()) {
+                    sliderSetting.buttonNext.classList.remove("d-none");
+                    sliderSetting.buttonPrev.classList.remove("d-none");
+                }
+                if (this.slides.length <= slide.slidesPerViewDynamic()) {
+                    sliderSetting.buttonNext.classList.add("d-none");
+                    sliderSetting.buttonPrev.classList.add("d-none");
+                }
+            }
+        },
+    });
+
+    if (sliderSetting.buttonNext && sliderSetting.buttonPrev) {
+        sliderSetting.buttonNext.addEventListener('click', (e) => {
+            e.preventDefault();
+            slider.slideNext();
+        });
+        sliderSetting.buttonPrev.addEventListener('click', (e) => {
+            e.preventDefault();
+            slider.slidePrev();
+        });
+    }
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    const sliders = document.querySelectorAll(".swiper");
+
+    [...sliders.length > 0 ? sliders : []]
+        .filter((slider) => !slider.classList.contains("no-parse"))
+        .map((slider) => {
+            const uuid = crypto.randomUUID();
+            const id = `slider-${uuid}`;
+            slider.setAttribute('id', id);
+            const buttonNext = slider.getElementsByClassName("swiper-button-next")[0];
+            const buttonPrev = slider.getElementsByClassName("swiper-button-prev")[0];
+            return {sliderID: id, buttonNext: buttonNext, buttonPrev: buttonPrev};
+        })
+        .forEach((slider) => {
+            try {
+                registerSlider(slider);
+            } catch (error) {
+                console.error("Unable to register slider: ", error);
+            }
+        });
+});
+
+const searchIconSpan = document.querySelectorAll(".aws-search-btn_icon");
+[...searchIconSpan.length > 0 ? searchIconSpan : []]
+    .filter((searchIcon) => searchIcon.children[0])
+    .map((searchIcon) => searchIcon.children[0])
+    .forEach((searchIcon) => searchIcon.setAttribute("fill", "white"));
 })();
 
 /******/ })()
