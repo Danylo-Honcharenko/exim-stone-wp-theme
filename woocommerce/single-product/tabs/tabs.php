@@ -31,14 +31,12 @@ $product_tabs = apply_filters( 'woocommerce_product_tabs', array() );
 if ( ! empty( $product_tabs ) ) : ?>
 
 	<div class="woocommerce-tabs wc-tabs-wrapper mt-4">
-		<ul class="tabs wc-tabs list-unstyled d-flex justify-content-center gap-2" role="tablist">
+		<ul class="tabs wc-tabs list-unstyled d-flex justify-content-center gap-3" role="tablist">
 			<?php foreach ( $product_tabs as $key => $product_tab ) : ?>
 				<li role="presentation" class="<?php echo esc_attr( $key ); ?>_tab" id="tab-title-<?php echo esc_attr( $key ); ?>">
-					<a href="#tab-<?php echo esc_attr( $key ); ?>" role="tab" aria-controls="tab-<?php echo esc_attr( $key ); ?>">
-                        <button class="btn btn-primary">
-                            <?php echo wp_kses_post( apply_filters( 'woocommerce_product_' . $key . '_tab_title', $product_tab['title'], $key ) ); ?>
-                        </button>
-					</a>
+					<a href="#tab-<?php echo esc_attr( $key ); ?>" role="tab" class="tab-link" aria-controls="tab-<?php echo esc_attr( $key ); ?>">
+                        <?php echo wp_kses_post( apply_filters( 'woocommerce_product_' . $key . '_tab_title', $product_tab['title'], $key ) ); ?>
+                    </a>
 				</li>
 			<?php endforeach; ?>
 		</ul>

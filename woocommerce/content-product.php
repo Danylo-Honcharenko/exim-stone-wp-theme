@@ -26,7 +26,7 @@ if ( ! is_a( $product, WC_Product::class ) || ! $product->is_visible() ) {
 }
 ?>
 
-<div class="<?php echo is_archive() ? 'col' : 'swiper-slide' ?>" <?php echo is_archive() ? 'style="width: 20rem;"' : '' ?>>
+<div class="<?php echo is_archive() ? 'col' : 'swiper-slide' ?>" <?php echo is_archive() ? 'style="width: 21rem;"' : '' ?>>
     <div class="card" <?php echo is_archive() ? '' : 'style="width: 20rem;"' ?>>
     <?php
     /**

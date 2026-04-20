@@ -24,7 +24,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 <?php if ( is_archive() ) : ?>
 	<div class="row row-cols-3 gap-4 items-container justify-content-center mt-3">
 <?php else : ?>
-		<section class="container-xxl mt-5">
+		<section class="container-xxl <?php echo is_front_page() ? "mt-5" : "mt-3" ?>">
 			<div class="swiper homeItemsSwiper">
 				<div class="swiper-wrapper">
 <?php endif; ?>
