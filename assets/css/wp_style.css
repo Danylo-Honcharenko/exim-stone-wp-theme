@@ -134,21 +134,46 @@
     width: 1em;
     height: 1em;
     text-decoration: none;
+    font-size: 23px;
 }
 
-.stars > span > a:after {
+.stars > span > a:before {
     display: block;
     position: absolute;
     top: 0;
     left: 0;
-    width: 1em;
-    height: 1em;
+    width: 1.5em;
+    height: 1.5em;
     line-height: 1;
     content: '\f005';
     font-family: 'Font Awesome 7 Free';
     font-weight: 900;
     text-indent: 0;
-    /*color: rgb(255, 212, 59);*/
+}
+
+.stars > span > a:hover ~ a::before {
+    content: '\f005';
+    color: white;
+}
+
+.stars > span:hover a:before  {
+    content: '\f005';
+    color: rgb(255, 212, 59);
+}
+
+.stars.selected a.active::before {
+    content: '\f005';
+    color: rgb(255, 212, 59);
+}
+
+.stars.selected a.active ~ a::before {
+    content: '\f005';
+    color: white;
+}
+
+.stars.selected a:not(.active)::before {
+    content: '\f005';
+    color: rgb(255, 212, 59);
 }
 
 .base-input {
@@ -220,4 +245,16 @@
 
 .methods {
     list-style-type: none;
+}
+
+.w-fit {
+    width: fit-content !important;
+}
+
+.review > .children {
+    list-style-type: none;
+}
+
+.review > .children > .comment {
+    background-color: #161616 !important;
 }

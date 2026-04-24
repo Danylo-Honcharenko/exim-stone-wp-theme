@@ -15,7 +15,7 @@ add_action( 'after_setup_theme', function () {
 } );
 
 add_action('wp_enqueue_scripts', function () {
-	wp_enqueue_style('eximstonecss', get_template_directory_uri() . '/assets/css/main.0f3462ef436fd8baac83.css');
+	wp_enqueue_style('eximstonecss', get_template_directory_uri() . '/assets/css/main.3ff7e469260bbf75285b.css');
 	wp_enqueue_style('eximstonewpcss', get_template_directory_uri() . '/assets/css/wp_style.css');
 	wp_enqueue_style('eximstonejsdelivr', 'https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css');
 	wp_enqueue_script('eximstonefontawesome', 'https://kit.fontawesome.com/7520a8b90b.js');

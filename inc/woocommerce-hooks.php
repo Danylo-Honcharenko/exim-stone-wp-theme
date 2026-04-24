@@ -88,7 +88,7 @@ add_filter('woocommerce_gallery_image_html_attachment_image_params', function ($
 });
 
 add_filter('woocommerce_dropdown_variation_attribute_options_args', function ($args) {
-	$args['class'] = 'form-select';
+	$args['class'] = 'form-select w-fit';
 	return $args;
 });
 
@@ -130,3 +130,7 @@ add_filter('woocommerce_order_button_html', function($button_html) {
 add_filter( 'excerpt_length', function($length) {
 	return 200;
 } );
+
+add_filter('woocommerce_reviews_title', function($reviews_title) {
+    return 'Отзывы';
+}, 10);
