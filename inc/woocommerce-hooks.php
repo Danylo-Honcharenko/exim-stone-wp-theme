@@ -6,9 +6,8 @@ add_filter('woocommerce_taxonomy_archive_description_raw', function ($descriptio
 	return "";
 });
 
-// Уберём метку распродажа
 add_filter('woocommerce_sale_flash', function ($html, $post, $product) {
-	return "";
+    return "";
 }, 10, 3);
 
 remove_action('woocommerce_before_shop_loop_item', 'woocommerce_template_loop_product_link_open', 10);
